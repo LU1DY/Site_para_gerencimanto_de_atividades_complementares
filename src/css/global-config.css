@@ -1,0 +1,80 @@
+/* Documento de estilização padrão do CSS do Projeto*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  /* ============= CORES ============= */
+
+  /* Cinza */
+  --color-neutral-50: #f7f8f8;
+  --color-neutral-100: #e8f1f0;
+  --color-neutral-300: #afc5c3;
+  --color-neutral-500: #6c7b83;
+  --color-neutral-600: #6a7981;
+  --color-neutral-900: #172126;
+  --color-box-shadow: rgba(0, 0, 0, 0.08);
+  /* Verde*/
+  --secondary-bg-color: #ffffff;
+  --color-teal-100: #f1f4f3;
+  --color-teal-200: #eef1f0;
+  --color-teal-600: #26736b;
+  --color-teal-700: #1b746b;
+  --primary-bg-color: #155b54;
+  /* Amarela */
+  --color-orange-100: #fdf5e6;
+  --color-orange-500: #f59f0a;
+  /* Vermelha */
+  --color-red-200: #f1aaac;
+  --color-red-500: #f50d13;
+  /* Azul */
+  --color-blue-200: #aab7f1;
+  --color-blue-500: #1741fe;
+
+  /* ============= ESTILO DE TÍTULO E TEXTO ============= */
+
+  --font-primary: "Inter", sans-serif;
+
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-thin: 300;
+
+  --font-title-section: 4rem;
+  --font-identify: 2.6rem;
+  --font-subtitle-section: 2.2rem;
+  --font-btn: 2rem;
+  --font-title-cards-link: 1.8rem;
+  --font-tags: 1.6rem;
+  --font-description: 1.4rem;
+
+  --letter-spacing-tight: -0.08em;
+
+  --border-radius: 0.8rem;
+
+  --padding-top_bottom-sidebar: 3.5rem;
+  --padding-left_rigth-sidebar: 2rem;
+
+  --padding-top_bottom-navbar: 2.8rem;
+  --padding-left_rigth-navbar: 5.4rem;
+
+  --padding-top_bottom-content-main: 4.5rem;
+  --padding-left_rigth-content-main: 2.5rem;
+
+  --width-box-link-sidebar: 22rem;
+  --width-btn: 33rem;
+  --width-cards: 36.5rem;
+
+}
