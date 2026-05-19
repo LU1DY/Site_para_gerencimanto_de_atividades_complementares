@@ -1,6 +1,6 @@
 /* Documento de estilização padrão do CSS do Projeto*/
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 * {
   margin: 0;
@@ -12,6 +12,17 @@ html,
 body {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 :root {
@@ -45,6 +56,7 @@ body {
   /* ============= ESTILO DE TÍTULO E TEXTO ============= */
 
   --font-primary: "Inter", sans-serif;
+  --font-secondary: "Nunito Sans", sans-serif;
 
   --font-weight-bold: 700;
   --font-weight-semibold: 600;
@@ -60,15 +72,13 @@ body {
   --font-tags: 1.6rem;
   --font-description: 1.4rem;
 
-  --letter-spacing-tight: -0.08em;
+  --letter-spacing-tight: -0.05em;
 
   --border-radius: 0.8rem;
 
-  --padding-top_bottom-sidebar: 3.5rem;
-  --padding-left_rigth-sidebar: 2rem;
+  --padding-sidebar: 3.5rem 2rem;
 
-  --padding-top_bottom-navbar: 2.8rem;
-  --padding-left_rigth-navbar: 5.4rem;
+  --padding-navbar: 2.8rem 5.4rem;
 
   --padding-top_bottom-content-main: 4.5rem;
   --padding-left_rigth-content-main: 2.5rem;
@@ -76,5 +86,5 @@ body {
   --width-box-link-sidebar: 22rem;
   --width-btn: 33rem;
   --width-cards: 36.5rem;
-
+  --width-sidebar: 26rem;
 }
