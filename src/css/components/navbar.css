@@ -1,42 +1,49 @@
 @import url(../config/global-config.css);
 
-#navbar {
+main .container:last-child {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 100%;
+}
+
+main .container:last-child #navbar {
   padding: var(--padding-navbar);
   display: flex;
   justify-content: end;
   border-bottom: 1px solid var(--color-box-shadow);
   box-shadow: 0px 0px 6px 1px var(--color-box-shadow);
-  max-width: 126rem;
+  max-width: 100%;
 }
-#navbar nav {
+main .container:last-child #navbar nav {
 }
-#navbar nav .user-box {
+main .container:last-child #navbar nav .user-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: max-content;
   column-gap: 1rem;
 }
-#navbar nav .user-box .user-name-course {
+main .container:last-child #navbar nav .user-box .user-name-course {
   display: flex;
   align-items: baseline;
   flex-direction: column;
   justify-content: center;
 }
-#navbar nav .user-box .user-name-course h2 {
+main .container:last-child #navbar nav .user-box .user-name-course h2 {
   letter-spacing: var(--letter-spacing-tight);
   font-family: var(--font-secondary);
   font-size: var(--font-identify);
   font-weight: var(--font-weight-bold);
   margin-bottom: -0.5rem;
 }
-#navbar nav .user-box .user-name-course h4 {
+main .container:last-child #navbar nav .user-box .user-name-course h4 {
   letter-spacing: var(--letter-spacing-tight);
   font-family: var(--font-secondary);
   font-size: var(--font-title-cards-link);
   font-weight: var(--font-weight-regular);
 }
-#navbar nav .user-box .perfil {
+main .container:last-child #navbar nav .user-box .perfil {
   background-color: var(--color-teal-700);
   width: 6rem;
   height: 6rem;
@@ -45,7 +52,7 @@
   align-items: center;
   justify-content: center;
 }
-#navbar nav .user-box .perfil h6 {
+main .container:last-child #navbar nav .user-box .perfil h6 {
   letter-spacing: var(--letter-spacing-tight);
   font-size: var(--font-subtitle-section);
   color: var(--secondary-bg-color);

@@ -1,6 +1,6 @@
 @import url(../config/global-config.css);
 
-#sidebar {
+main .container:first-child #sidebar {
   width: var(--width-sidebar);
   display: flex;
   justify-content: space-between;
@@ -10,14 +10,14 @@
   height: 100dvh;
 }
 
-#sidebar .header-logo {
+main .container:first-child #sidebar .header-logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
   column-gap: 1.5rem;
 }
 
-#sidebar .header-logo .logo {
+main .container:first-child #sidebar .header-logo .logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@
   padding: 1rem;
 }
 
-#sidebar .header-logo .logo svg {
+main .container:first-child #sidebar .header-logo .logo svg {
   object-fit: contain;
   width: 5rem;
   height: 5rem;
@@ -34,10 +34,10 @@
   left: 5%;
 }
 
-#sidebar .header-logo .name-project {
+main .container:first-child #sidebar .header-logo .name-project {
 }
 
-#sidebar .header-logo .name-project h4 {
+main .container:first-child #sidebar .header-logo .name-project h4 {
   font-size: var(--font-identify);
   color: var(--secondary-bg-color);
   font-weight: var(--font-weight-bold);
@@ -46,7 +46,7 @@
   margin-bottom: -0.5rem;
 }
 
-#sidebar .header-logo .name-project h6 {
+main .container:first-child #sidebar .header-logo .name-project h6 {
   font-size: var(--font-tags);
   color: var(--secondary-bg-color);
   font-weight: var(--font-weight-regular);
@@ -54,24 +54,24 @@
   letter-spacing: var(--letter-spacing-tight);
 }
 
-#sidebar nav {
+main .container:first-child #sidebar nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-#sidebar nav ul {
+main .container:first-child #sidebar nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
 }
-#sidebar nav ul li {
+main .container:first-child #sidebar nav ul li {
   display: flex;
   align-items: center;
   justify-content: baseline;
 }
-#sidebar nav ul li a {
+main .container:first-child #sidebar nav ul li a {
   display: flex;
   column-gap: 0.8rem;
   align-items: center;
@@ -79,13 +79,13 @@
   color: var(--secondary-bg-color);
   font-weight: var(--font-weight-thin);
 }
-#sidebar nav ul li a svg {
+main .container:first-child #sidebar nav ul li a svg {
   width: 2.4rem;
   height: 2.4rem;
 }
-#sidebar nav .logout {
+main .container:first-child #sidebar nav .logout {
 }
-#sidebar nav .logout a {
+main .container:first-child #sidebar nav .logout a {
   display: flex;
   column-gap: 0.8rem;
   align-items: center;
@@ -93,5 +93,5 @@
   color: var(--secondary-bg-color);
   font-weight: var(--font-weight-thin);
 }
-#sidebar nav .logout a svg {
+main .container:first-child #sidebar nav .logout a svg {
 }
