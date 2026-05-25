@@ -80,8 +80,7 @@ a {
 
   --padding-navbar: 2.8rem 5.4rem;
 
-  --padding-top_bottom-content-main: 4.5rem;
-  --padding-left_rigth-content-main: 2.5rem;
+  --padding-content-main: 4.5rem 2.5rem;
 
   --width-box-link-sidebar: 22rem;
   --width-btn: 33rem;
