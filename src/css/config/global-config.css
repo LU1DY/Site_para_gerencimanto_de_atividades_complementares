@@ -25,66 +25,67 @@ a {
   text-decoration: none;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 :root {
-  /* ============= CORES ============= */
+  /* ============= COLORS ============= */
 
-  /* Cinza */
-  --color-neutral-50: #f7f8f8;
-  --color-neutral-100: #e8f1f0;
-  --color-neutral-300: #afc5c3;
-  --color-neutral-500: #6c7b83;
-  --color-neutral-600: #6a7981;
-  --color-neutral-900: #172126;
+  --font-family-primary: "Inter", sans-serif;
+  --font-family-secondary: "Nunito Sans", sans-serif;
+
+  --color-link-sidebar: #afc5c3;
+  --color-background-main: #f7f8f8;
+  --color-description: #6a7981;
+  --color-title: #172126;
   --color-box-shadow: rgba(0, 0, 0, 0.08);
-  /* Verde*/
-  --secondary-bg-color: #ffffff;
-  --color-teal-100: #f1f4f3;
-  --color-teal-200: #eef1f0;
-  --color-teal-600: #26736b;
-  --color-teal-700: #1b746b;
-  --primary-bg-color: #155b54;
-  /* Amarela */
-  --color-orange-100: #fdf5e6;
-  --color-orange-500: #f59f0a;
-  /* Vermelha */
-  --color-red-200: #f1aaac;
-  --color-red-500: #f50d13;
-  /* Azul */
-  --color-blue-200: #aab7f1;
-  --color-blue-500: #1741fe;
+  --color-background-white: #ffffff;
+  --color-background-navbar: #155b54;
+  --color-background-navbar: #155b54;
 
-  /* ============= ESTILO DE TÍTULO E TEXTO ============= */
+  --details: #afc5c3;
+  --border-color-1: #dce2e5;
+  --background-color-1: #e8f1f0;
+  --color-background-icons-green-2: #e8f1f0;
+  --color-icons-green-1: #1b746b;
+  --color-icons-orange-1: #fdf5e6;
+  --color-icons-orange-2: #f59f0a;
+  --color-icons-red-1: #f1aaac;
+  --color-icons-red-2: #f50d13;
+  --color-icons-blue-1: #aab7f1;
+  --color-icons-blue-2: #1741fe;
+  --color-background-icons-green-1: #1b746b1a;
 
-  --font-primary: "Inter", sans-serif;
-  --font-secondary: "Nunito Sans", sans-serif;
-
-  --font-weight-bold: 700;
-  --font-weight-semibold: 600;
-  --font-weight-medium: 500;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
-  --font-weight-thin: 300;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
-  --font-title-section: 4rem;
-  --font-identify: 2.6rem;
-  --font-subtitle-section: 2.2rem;
-  --font-btn: 2rem;
-  --font-title-cards-link: 1.8rem;
-  --font-tags: 1.6rem;
-  --font-description: 1.4rem;
+  --font-size-12px: 1.2rem;
+  --font-size-14px: 1.4rem;
+  --font-size-16px: 1.6rem;
+  --font-size-18px: 1.8rem;
+  --font-size-20px: 2rem;
+  --font-size-22px: 2.2rem;
+  --font-size-24px: 2.4rem;
+  --font-size-26px: 2.6rem;
+  --font-size-28px: 2.8rem;
+  --font-size-30px: 3rem;
+  --font-size-32px: 3.2rem;
 
   --letter-spacing-tight: -0.05em;
 
   --border-radius: 0.8rem;
 
   --padding-sidebar: 3.5rem 2rem;
-
   --padding-navbar: 2.8rem 5.4rem;
+  --padding-main-content: 4.5rem 2.5rem;
 
-  --padding-top_bottom-content-main: 4.5rem;
-  --padding-left_rigth-content-main: 2.5rem;
-
-  --width-box-link-sidebar: 22rem;
-  --width-btn: 33rem;
-  --width-cards: 36.5rem;
   --width-sidebar: 26rem;
+  --width-sidebar-link: 22rem;
+  --width-button: 33rem;
+  --width-card: 36.5rem;
 }
