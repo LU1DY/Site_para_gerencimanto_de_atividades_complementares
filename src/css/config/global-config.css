@@ -36,23 +36,29 @@ a {
   --font-family-primary: "Inter", sans-serif;
   --font-family-secondary: "Nunito Sans", sans-serif;
 
-  --color-link-sidebar: #afc5c3;
+  --color-link-sidebar: #f1f4f3b3;
   --color-background-main: #f7f8f8;
   --color-description: #6a7981;
   --color-title: #172126;
-  --color-box-shadow: rgba(0, 0, 0, 0.08);
+  --color-box-shadow: #0000000d;
   --color-background-white: #ffffff;
+  --color-background-white-blur: #ffffff8a;
   --color-background-navbar: #155b54;
-  --color-background-navbar: #155b54;
+  --color-green-details: #26736b;
 
   --details: #afc5c3;
+  --details-2: #f0f0f0;
   --border-color-1: #dce2e5;
   --background-color-1: #e8f1f0;
   --color-background-icons-green-2: #e8f1f0;
+  --color-background-icons-green-3: #e9f4ef;
+  --color-background-icons-green-4: #25935f1a;
+  --color-icons-gray: #eef1f0;
   --color-icons-green-1: #1b746b;
+  --color-icons-green-2: #25935f;
   --color-icons-orange-1: #fdf5e6;
   --color-icons-orange-2: #f59f0a;
-  --color-icons-red-1: #f1aaac;
+  --color-icons-red-1: #f1cfd0;
   --color-icons-red-2: #f50d13;
   --color-icons-blue-1: #aab7f1;
   --color-icons-blue-2: #1741fe;
@@ -79,10 +85,12 @@ a {
   --letter-spacing-tight: -0.05em;
 
   --border-radius: 0.8rem;
+  --border-radius-2: 1.2rem;
+  --border-radius-3: 1rem;
 
   --padding-sidebar: 3.5rem 2rem;
-  --padding-navbar: 2.8rem 5.4rem;
-  --padding-main-content: 4.5rem 2.5rem;
+  --padding-navbar: 1.6rem 3.2rem;
+  --padding-main-content: 3.2rem;
 
   --width-sidebar: 26rem;
   --width-sidebar-link: 22rem;

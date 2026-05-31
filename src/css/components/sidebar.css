@@ -1,97 +1,114 @@
 @import url(../config/global-config.css);
 
-main .container:first-child #sidebar {
+#sidebar {
   width: var(--width-sidebar);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  background-color: var(--primary-bg-color);
+  background-color: var(--color-background-navbar);
   padding: var(--padding-sidebar);
   height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 
-main .container:first-child #sidebar .header-logo {
+.selected {
+  color: var(--color-background-white) !important;
+}
+
+.selected-li {
+  background-color: var(--color-green-details);
+  border-radius: var(--border-radius);
+}
+
+#sidebar .header-logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  column-gap: 1.5rem;
+  column-gap: 1.2rem;
 }
 
-main .container:first-child #sidebar .header-logo .logo {
+#sidebar .header-logo .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-teal-600);
+  background-color: var(--color-green-details);
   border-radius: var(--border-radius);
-  padding: 1rem;
+  padding: 0.6rem;
 }
 
-main .container:first-child #sidebar .header-logo .logo svg {
+#sidebar .header-logo .logo svg {
   object-fit: contain;
-  width: 5rem;
-  height: 5rem;
+  width: 2.4rem;
+  height: 2.4rem;
   position: relative;
   left: 5%;
 }
 
-main .container:first-child #sidebar .header-logo .name-project {
-}
-
-main .container:first-child #sidebar .header-logo .name-project h4 {
-  font-size: var(--font-identify);
-  color: var(--secondary-bg-color);
+#sidebar .header-logo .name-project h4 {
+  font-size: var(--font-size-16px);
+  color: var(--color-background-white);
   font-weight: var(--font-weight-bold);
-  font-family: var(--font-secondary);
+  font-family: var(--font-family-secondary);
   letter-spacing: var(--letter-spacing-tight);
-  margin-bottom: -0.5rem;
+  margin-bottom: -0.3rem;
 }
 
-main .container:first-child #sidebar .header-logo .name-project h6 {
-  font-size: var(--font-tags);
-  color: var(--secondary-bg-color);
+#sidebar .header-logo .name-project h6 {
+  font-size: var(--font-size-12px);
+  color: var(--color-background-white);
   font-weight: var(--font-weight-regular);
-  font-family: var(--font-secondary);
+  font-family: var(--font-family-secondary);
   letter-spacing: var(--letter-spacing-tight);
 }
 
-main .container:first-child #sidebar nav {
+#sidebar nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  width: 100%;
 }
-main .container:first-child #sidebar nav ul {
+
+#sidebar nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 0.4rem;
 }
-main .container:first-child #sidebar nav ul li {
+
+#sidebar nav ul li {
   display: flex;
   align-items: center;
   justify-content: baseline;
+  padding: 1rem 1.2rem;
 }
-main .container:first-child #sidebar nav ul li a {
+
+#sidebar nav ul li a {
+  display: flex;
+  column-gap: 1.2rem;
+  align-items: center;
+  font-size: var(--font-size-14px);
+  color: var(--color-link-sidebar);
+  font-weight: var(--font-weight-medium);
+}
+
+#sidebar nav ul li a svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+#sidebar nav .logout a {
   display: flex;
   column-gap: 0.8rem;
   align-items: center;
-  font-size: var(--font-tags);
-  color: var(--secondary-bg-color);
-  font-weight: var(--font-weight-thin);
+  font-size: var(--font-size-14px);
+  color: var(--color-background-white);
+  font-weight: var(--font-weight-light);
 }
-main .container:first-child #sidebar nav ul li a svg {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-main .container:first-child #sidebar nav .logout {
-}
-main .container:first-child #sidebar nav .logout a {
-  display: flex;
-  column-gap: 0.8rem;
-  align-items: center;
-  font-size: var(--font-tags);
-  color: var(--secondary-bg-color);
-  font-weight: var(--font-weight-thin);
-}
-main .container:first-child #sidebar nav .logout a svg {
+
+#sidebar nav .logout a svg {
+  width: 1.6rem;
+  height: 1.6rem;
 }

@@ -1,17 +1,15 @@
 @import url(../config/global-config.css);
 
-main {
+.container-certificados {
   display: flex;
-  width: 100dvw;
-  height: 100dvh;
 }
-main .container {
+.container-certificados .container {
 }
-main .container:first-child {
+.container-certificados .container:first-child {
   width: max-content;
   height: 100%;
 }
-main .container:last-child {
+.container-certificados .container:last-child {
   display: flex;
   flex-direction: column;
   width: stretch;
