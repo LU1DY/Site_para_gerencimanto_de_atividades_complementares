@@ -57,3 +57,25 @@
   color: var(--color-background-white);
   font-weight: var(--font-weight-semibold);
 }
+
+.btn-navbar {
+}
+.btn-navbar .row {
+  column-gap: 1.6rem;
+}
+.btn-navbar .row button {
+  border: none;
+  font-family: "Inter", system-ui;
+  font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-medium);
+  padding: 1rem 1.2rem;
+  border-radius: 0.8rem;
+}
+.btn-navbar .row .login {
+  color: var(--color-title);
+  background-color: transparent;
+}
+.btn-navbar .row .signup {
+  color: var(--color-background-white);
+  background-color: var(--color-background-navbar);
+}

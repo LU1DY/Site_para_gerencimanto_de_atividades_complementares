@@ -1,5 +1,7 @@
 @import url(../config/global-config.css);
 
+
+
 .container-login {
   display: flex;
   flex-direction: column;
@@ -9,6 +11,9 @@
   width: 100%;
   max-width: 44rem;
   padding: 2.4rem;
+  align-self: center;
+  justify-self: center;
+  height: 100%;
 }
 
 /* ─── Cabeçalho ─── */

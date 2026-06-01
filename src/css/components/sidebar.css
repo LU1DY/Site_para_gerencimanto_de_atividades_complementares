@@ -104,11 +104,12 @@
   column-gap: 0.8rem;
   align-items: center;
   font-size: var(--font-size-14px);
-  color: var(--color-background-white);
+  color: var(--color-link-sidebar);
   font-weight: var(--font-weight-light);
 }
 
 #sidebar nav .logout a svg {
   width: 1.6rem;
   height: 1.6rem;
+  stroke: var(--color-link-sidebar);
 }

@@ -11,7 +11,7 @@
 }
 
 .display-none {
-  display: none;
+  display: none !important;
 }
 
 .header-dashboard {
@@ -132,7 +132,7 @@
   color: var(--color-description);
 }
 
-.graph   p {
+.graph p {
   display: flex;
   align-items: center;
   column-gap: 0.6rem;
@@ -141,12 +141,12 @@
   color: var(--color-description);
 }
 
-.graph   p span {
+.graph p span {
   display: flex;
   align-items: center;
 }
 
-.graph   p span svg {
+.graph p span svg {
   width: 1.6rem;
   height: 1.6rem;
   stroke: var(--color-description);
@@ -311,7 +311,6 @@
   }
 }
 
-
 .list-dashboard-eventos li .column h3,
 .list-certificados li .column h3 {
   font-size: var(--font-size-14px);
@@ -352,7 +351,7 @@
   color: var(--color-description);
 }
 
-.header-meus-eventos   a {
+.header-meus-eventos a {
   font-size: var(--font-size-14px);
   font-weight: var(--font-weight-semibold);
   color: var(--color-icons-green-2);
@@ -454,4 +453,47 @@
   height: 1.8rem;
   flex-shrink: 0;
   stroke: var(--color-title);
+}
+
+.container-meus-eventos {
+  background-color: var(--color-background-white);
+  padding: 2.4rem;
+  border: 1px solid var(--border-color-1);
+  border-radius: 1.2rem;
+}
+
+.btn-explorar-eventos {
+  font-size: var(--font-size-14px);
+  padding: 1rem 1.2rem;
+  background-color: var(--color-icons-green-1);
+  border-radius: 0.8rem;
+  color: var(--color-background-white);
+  border: none;
+  margin-top: 1.6rem;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system;
+}
+
+.meus-eventos-vazio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.meus-eventos-vazio svg {
+  stroke: var(--border-color-1);
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 1.2rem;
+}
+
+.meus-eventos-vazio p {
+  font-size: var(--font-size-14px);
+  color: var(--color-description);
+}
+
+.meus-eventos-vazio button a {
+  font-weight: var(--font-weight-medium);
 }
