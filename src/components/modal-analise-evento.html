@@ -1,405 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modal – Análise do Evento</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Modal – Análise do Evento</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="../css/components/modal-analise-evento.css" />
+	</head>
+	<body>
+		<div class="modal">
+			<header class="modal-header">
+				<div class="modal-header-text">
+					<h2>Análise do Evento</h2>
+					<p>Estatísticas de inscrições e informações detalhadas.</p>
+				</div>
+				<button class="btn-fechar" type="button" aria-label="Fechar">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round">
+						<path d="M18 6 6 18M6 6l12 12" />
+					</svg>
+				</button>
+			</header>
 
-    :root {
-      --color-background-main: #f7f8f8;
-      --color-background-white: #ffffff;
-      --color-background-navbar: #155b54;
-      --color-icons-green-1: #1b746b;
-      --color-icons-green-2: #25935f;
-      --color-title: #172126;
-      --color-description: #6a7981;
-      --border-color-1: #dce2e5;
-      --color-box-shadow: #0000000d;
-      --details-2: #f0f0f0;
-      --font-family-primary: "Inter", sans-serif;
-      --font-weight-regular: 400;
-      --font-weight-medium: 500;
-      --font-weight-semibold: 600;
-      --font-weight-bold: 700;
-      --font-size-12px: 1.2rem;
-      --font-size-14px: 1.4rem;
-      --font-size-16px: 1.6rem;
-      --font-size-18px: 1.8rem;
-      --font-size-24px: 2.4rem;
-      --border-radius: 0.8rem;
-      --border-radius-2: 1.2rem;
-    }
+			<div class="evento-card">
+				<span class="evento-nome"
+					>Seminário de Inteligência Artificial</span
+				>
+				<div class="evento-meta-row">
+					<span class="evento-meta-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<rect x="3" y="4" width="18" height="18" rx="2" />
+							<path d="M8 2v4M16 2v4M3 10h18" />
+						</svg>
+						09/04/2026
+					</span>
+					<span class="evento-meta-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<path
+								d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+							<circle cx="12" cy="10" r="3" />
+						</svg>
+						Auditório Central
+					</span>
+					<span class="evento-meta-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<path
+								d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+							<path
+								d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+						</svg>
+						Seminário
+					</span>
+					<span class="evento-meta-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<circle cx="12" cy="12" r="10" />
+							<polyline points="12 6 12 12 16 14" />
+						</svg>
+						4h · presencial
+					</span>
+				</div>
+				<p class="evento-descricao">
+					Palestra sobre os avanços recentes em IA generativa.
+				</p>
+			</div>
 
-    html, body {
-      font-size: 62.5%;
-      font-family: var(--font-family-primary);
-      background-color: #e5e7eb;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2.4rem;
-    }
+			<div class="stats-grid">
+				<div class="stat-card">
+					<span class="stat-label">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<path
+								d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+							<circle cx="9" cy="7" r="4" />
+							<path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+							<path d="M16 3.13a4 4 0 0 1 0 7.75" />
+						</svg>
+						Inscritos
+					</span>
+					<span class="stat-valor">33</span>
+				</div>
+				<div class="stat-card">
+					<span class="stat-label">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<circle cx="12" cy="12" r="10" />
+							<path d="m9 12 2 2 4-4" />
+						</svg>
+						Confirmados
+					</span>
+					<span class="stat-valor">23</span>
+				</div>
+				<div class="stat-card">
+					<span class="stat-label">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+							<polyline points="16 7 22 7 22 13" />
+						</svg>
+						Presentes
+					</span>
+					<span class="stat-valor">0</span>
+				</div>
+			</div>
 
-    /* ════════════════════════════
-       OVERLAY
-    ════════════════════════════ */
+			<div class="ocupacao-wrapper">
+				<div class="ocupacao-header">
+					<span class="ocupacao-label">Ocupação</span>
+					<span class="ocupacao-valor">33/100</span>
+				</div>
+				<div class="progress-track">
+					<div class="progress-fill" style="width: 33%"></div>
+				</div>
+			</div>
 
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background-color: #17212680;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2.4rem;
-      z-index: 100;
-    }
-
-    /* ════════════════════════════
-       CARD DO MODAL
-    ════════════════════════════ */
-
-    .modal {
-      background-color: var(--color-background-white);
-      border: 1px solid var(--border-color-1);
-      border-radius: var(--border-radius-2);
-      box-shadow: 0 8px 32px #17212624;
-      width: 100%;
-      max-width: 46rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      padding: 2.4rem;
-    }
-
-    /* ─── Cabeçalho ─── */
-
-    .modal-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 1.6rem;
-    }
-
-    .modal-header-text h2 {
-      font-size: var(--font-size-18px);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-title);
-      margin-bottom: 0.4rem;
-    }
-
-    .modal-header-text p {
-      font-size: var(--font-size-14px);
-      color: var(--color-description);
-    }
-
-    .btn-fechar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 3.2rem;
-      height: 3.2rem;
-      flex-shrink: 0;
-      background: none;
-      border: none;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      transition: background-color 0.15s;
-    }
-
-    .btn-fechar:hover { background-color: var(--details-2); }
-
-    .btn-fechar svg {
-      width: 1.8rem;
-      height: 1.8rem;
-      stroke: var(--color-description);
-    }
-
-    /* ─── Card do evento ─── */
-
-    .evento-card {
-      background-color: var(--color-background-main);
-      border: 1px solid var(--border-color-1);
-      border-radius: var(--border-radius);
-      padding: 1.6rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .evento-nome {
-      font-size: var(--font-size-14px);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-title);
-    }
-
-    .evento-meta-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.6rem 1.2rem;
-    }
-
-    .evento-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: var(--font-size-12px);
-      color: var(--color-description);
-    }
-
-    .evento-meta-item svg {
-      width: 1.4rem;
-      height: 1.4rem;
-      stroke: var(--color-description);
-      flex-shrink: 0;
-    }
-
-    .evento-descricao {
-      font-size: var(--font-size-12px);
-      color: var(--color-description);
-      line-height: 1.5;
-      padding-top: 0.4rem;
-      border-top: 1px solid var(--border-color-1);
-    }
-
-    /* ─── Grid de estatísticas ─── */
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.2rem;
-    }
-
-    .stat-card {
-      background-color: var(--color-background-white);
-      border: 1px solid var(--border-color-1);
-      border-radius: var(--border-radius);
-      padding: 1.4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .stat-label {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: var(--font-size-12px);
-      color: var(--color-description);
-    }
-
-    .stat-label svg {
-      width: 1.4rem;
-      height: 1.4rem;
-      stroke: var(--color-description);
-      flex-shrink: 0;
-    }
-
-    .stat-valor {
-      font-size: var(--font-size-24px);
-      font-weight: var(--font-weight-bold);
-      color: var(--color-title);
-      line-height: 1;
-    }
-
-    /* ─── Barra de ocupação ─── */
-
-    .ocupacao-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .ocupacao-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .ocupacao-label {
-      font-size: var(--font-size-12px);
-      color: var(--color-description);
-    }
-
-    .ocupacao-valor {
-      font-size: var(--font-size-12px);
-      color: var(--color-description);
-    }
-
-    .progress-track {
-      width: 100%;
-      height: 0.8rem;
-      background-color: var(--details-2);
-      border-radius: 10rem;
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      height: 100%;
-      border-radius: 10rem;
-      background-color: var(--color-background-navbar);
-      transition: width 0.4s ease;
-    }
-
-    /* ─── Rodapé ─── */
-
-    .modal-footer {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-    }
-
-    .btn-fechar-footer {
-      padding: 1rem 2rem;
-      background-color: transparent;
-      border: 1px solid var(--border-color-1);
-      border-radius: var(--border-radius);
-      font-family: var(--font-family-primary);
-      font-size: var(--font-size-14px);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-title);
-      cursor: pointer;
-      transition: background-color 0.15s;
-    }
-
-    .btn-fechar-footer:hover { background-color: var(--color-background-main); }
-
-    .btn-editar {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      padding: 1rem 2rem;
-      background-color: var(--color-icons-green-1);
-      border: none;
-      border-radius: var(--border-radius);
-      font-family: var(--font-family-primary);
-      font-size: var(--font-size-14px);
-      font-weight: var(--font-weight-semibold);
-      color: #ffffff;
-      cursor: pointer;
-      transition: background-color 0.15s, transform 0.1s;
-    }
-
-    .btn-editar:hover { background-color: var(--color-background-navbar); }
-    .btn-editar:active { transform: scale(0.98); }
-
-    .btn-editar svg {
-      width: 1.6rem;
-      height: 1.6rem;
-      stroke: #ffffff;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="modal-overlay">
-    <div class="modal">
-
-      <!-- Cabeçalho -->
-      <header class="modal-header">
-        <div class="modal-header-text">
-          <h2>Análise do Evento</h2>
-          <p>Estatísticas de inscrições e informações detalhadas.</p>
-        </div>
-        <button class="btn-fechar" type="button" aria-label="Fechar">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 6 6 18M6 6l12 12"/>
-          </svg>
-        </button>
-      </header>
-
-      <!-- Card do evento -->
-      <div class="evento-card">
-        <span class="evento-nome">Seminário de Inteligência Artificial</span>
-        <div class="evento-meta-row">
-          <span class="evento-meta-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/>
-            </svg>
-            09/04/2026
-          </span>
-          <span class="evento-meta-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>
-            </svg>
-            Auditório Central
-          </span>
-          <span class="evento-meta-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-            </svg>
-            Seminário
-          </span>
-          <span class="evento-meta-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-            </svg>
-            4h · presencial
-          </span>
-        </div>
-        <p class="evento-descricao">Palestra sobre os avanços recentes em IA generativa.</p>
-      </div>
-
-      <!-- Estatísticas -->
-      <div class="stats-grid">
-        <div class="stat-card">
-          <span class="stat-label">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-            Inscritos
-          </span>
-          <span class="stat-valor">33</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
-            </svg>
-            Confirmados
-          </span>
-          <span class="stat-valor">23</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
-            </svg>
-            Presentes
-          </span>
-          <span class="stat-valor">0</span>
-        </div>
-      </div>
-
-      <!-- Barra de ocupação -->
-      <div class="ocupacao-wrapper">
-        <div class="ocupacao-header">
-          <span class="ocupacao-label">Ocupação</span>
-          <span class="ocupacao-valor">33/100</span>
-        </div>
-        <div class="progress-track">
-          <div class="progress-fill" style="width: 33%"></div>
-        </div>
-      </div>
-
-      <!-- Rodapé -->
-      <footer class="modal-footer">
-        <button class="btn-fechar-footer" type="button">Fechar</button>
-        <button class="btn-editar" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
-          </svg>
-          Editar evento
-        </button>
-      </footer>
-
-    </div>
-  </div>
-
-</body>
+			<footer class="modal-footer">
+				<button class="btn-fechar-footer" type="button">Fechar</button>
+				<button class="btn-editar" type="button">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round">
+						<path
+							d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
+					</svg>
+					Editar evento
+				</button>
+			</footer>
+		</div>
+	</body>
 </html>
