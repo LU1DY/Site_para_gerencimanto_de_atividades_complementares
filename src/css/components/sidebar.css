@@ -1,0 +1,115 @@
+@import url(../config/global-config.css);
+
+#sidebar {
+  width: var(--width-sidebar);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: var(--color-background-navbar);
+  padding: var(--padding-sidebar);
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.selected {
+  color: var(--color-background-white) !important;
+}
+
+.selected-li {
+  background-color: var(--color-green-details);
+  border-radius: var(--border-radius);
+}
+
+#sidebar .header-logo {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+#sidebar .header-logo .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-green-details);
+  border-radius: var(--border-radius);
+  padding: 0.6rem;
+}
+
+#sidebar .header-logo .logo svg {
+  object-fit: contain;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  left: 5%;
+}
+
+#sidebar .header-logo .name-project h4 {
+  font-size: var(--font-size-16px);
+  color: var(--color-background-white);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-secondary);
+  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: -0.3rem;
+}
+
+#sidebar .header-logo .name-project h6 {
+  font-size: var(--font-size-12px);
+  color: var(--color-background-white);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-secondary);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+#sidebar nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+#sidebar nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+}
+
+#sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  padding: 1rem 1.2rem;
+}
+
+#sidebar nav ul li a {
+  display: flex;
+  column-gap: 1.2rem;
+  align-items: center;
+  font-size: var(--font-size-14px);
+  color: var(--color-link-sidebar);
+  font-weight: var(--font-weight-medium);
+}
+
+#sidebar nav ul li a svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+#sidebar nav .logout a {
+  display: flex;
+  column-gap: 0.8rem;
+  align-items: center;
+  font-size: var(--font-size-14px);
+  color: var(--color-link-sidebar);
+  font-weight: var(--font-weight-light);
+}
+
+#sidebar nav .logout a svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: var(--color-link-sidebar);
+}
