@@ -1,319 +1,333 @@
 @import url(../config/global-config.css);
 
 body {
-  background-color: var(--color-background-main);
+	background-color: var(--color-background-main);
+}
+
+.display-none {
+	display: none !important;
+}
+
+.input-action {
+	position: absolute;
+	right: 1.4rem;
+	display: flex;
+	align-items: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	color: var(--color-description);
+}
+
+.input-action svg {
+	width: 1.8rem;
+	height: 1.8rem;
+	stroke: var(--color-description);
 }
 
 /* ─── Layout ─── */
 
 .container-cadastro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2.4rem;
-  width: 100%;
-  max-width: 58rem;
-  align-self: center;
-  justify-self: center;
-  height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2.4rem;
+	width: 100%;
+	max-width: 58rem;
+	align-self: center;
+	justify-self: center;
+	height: 100%;
 }
 
 /* ─── Cabeçalho ─── */
 
 .cadastro-header {
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
 }
 
 .cadastro-header-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 5.2rem;
-  height: 5.2rem;
-  background-color: var(--color-icons-green-3);
-  border-radius: var(--border-radius-2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 5.2rem;
+	height: 5.2rem;
+	background-color: var(--color-icons-green-3);
+	border-radius: var(--border-radius-2);
 }
 
 .cadastro-header-icon svg {
-  width: 2.4rem;
-  height: 2.4rem;
-  stroke: var(--color-icons-green-1);
+	width: 2.4rem;
+	height: 2.4rem;
+	stroke: var(--color-icons-green-1);
 }
 
 .column h1 {
-  font-size: var(--font-size-24px);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-title);
-  letter-spacing: -1px;
-  line-height: 1.1;
+	font-size: var(--font-size-24px);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-title);
+	letter-spacing: -1px;
+	line-height: 1.1;
 }
 
 .column p {
-  font-size: var(--font-size-14px);
-  color: var(--color-description);
-  margin-top: 0.4rem;
+	font-size: var(--font-size-14px);
+	color: var(--color-description);
+	margin-top: 0.4rem;
 }
 
 /* ─── Card ─── */
 
 .cadastro-card {
-  width: 100%;
-  background-color: var(--color-background-white);
-  border: 1px solid var(--border-color-1);
-  border-radius: var(--border-radius-2);
-  padding: 2.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
+	width: 100%;
+	background-color: var(--color-background-white);
+	border: 1px solid var(--border-color-1);
+	border-radius: var(--border-radius-2);
+	padding: 2.8rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
 }
 
 .cadastro-card-header h2 {
-  font-size: var(--font-size-18px);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-title);
-  margin-bottom: 0.4rem;
+	font-size: var(--font-size-18px);
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-title);
+	margin-bottom: 0.4rem;
 }
 
 .cadastro-card-header p {
-  font-size: var(--font-size-14px);
-  color: var(--color-description);
+	font-size: var(--font-size-14px);
+	color: var(--color-description);
 }
 
 /* ─── Formulário ─── */
 
 .cadastro-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
 }
 
 /* Row com dois campos lado a lado */
 .form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.2rem;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
 }
 
 .form-label {
-  font-size: var(--font-size-14px);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-title);
+	font-size: var(--font-size-14px);
+	font-weight: var(--font-weight-medium);
+	color: var(--color-title);
 }
 
 /* ─── Input com ícone ─── */
 
 .input {
-  position: relative;
-  display: flex;
-  align-items: center;
+	position: relative;
+	display: flex;
+	align-items: center;
 }
 
 .input-icon {
-  position: absolute;
-  left: 1.4rem;
-  display: flex;
-  align-items: center;
-  pointer-events: none;
+	position: absolute;
+	left: 1.4rem;
+	display: flex;
+	align-items: center;
+	pointer-events: none;
 }
 
 .input-icon svg {
-  width: 1.8rem;
-  height: 1.8rem;
-  stroke: var(--color-description);
+	width: 1.8rem;
+	height: 1.8rem;
+	stroke: var(--color-description);
 }
 
 .form-input {
-  width: 100%;
-  padding: 1.1rem 1.4rem 1.1rem 4.4rem;
-  font-family: "Inter", sans-serif;
-  font-size: var(--font-size-14px);
-  color: var(--color-title);
-  background-color: var(--color-background-main);
-  border: 1px solid var(--border-color-1);
-  border-radius: var(--border-radius);
-  outline: none;
-  transition:
-    border-color 0.15s,
-    box-shadow 0.15s;
+	width: 100%;
+	padding: 1.1rem 1.4rem 1.1rem 4.4rem;
+	font-family: "Inter", sans-serif;
+	font-size: var(--font-size-14px);
+	color: var(--color-title);
+	background-color: var(--color-background-main);
+	border: 1px solid var(--border-color-1);
+	border-radius: var(--border-radius);
+	outline: none;
+	transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .form-input::placeholder {
-  color: var(--color-description);
+	color: var(--color-description);
 }
 
 .form-input:focus {
-  border-color: var(--color-icons-green-1);
-  box-shadow: 0 0 0 3px #1b746b18;
+	border-color: var(--color-icons-green-1);
+	box-shadow: 0 0 0 3px #1b746b18;
 }
 
 /* ─── Select (Curso) ─── */
 
 .select {
-  position: relative;
-  display: flex;
-  align-items: center;
+	position: relative;
+	display: flex;
+	align-items: center;
 }
 
 .select svg.select-arrow {
-  position: absolute;
-  right: 1.4rem;
-  width: 1.6rem;
-  height: 1.6rem;
-  stroke: var(--color-description);
-  pointer-events: none;
+	position: absolute;
+	right: 1.4rem;
+	width: 1.6rem;
+	height: 1.6rem;
+	stroke: var(--color-description);
+	pointer-events: none;
 }
 
 .form-select {
-  width: 100%;
-  padding: 1.1rem 3.6rem 1.1rem 1.4rem;
-  font-family: "Inter", sans-serif;
-  font-size: var(--font-size-14px);
-  color: var(--color-description);
-  background-color: var(--color-background-main);
-  border: 1px solid var(--border-color-1);
-  border-radius: var(--border-radius);
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  cursor: pointer;
-  transition:
-    border-color 0.15s,
-    box-shadow 0.15s;
+	width: 100%;
+	padding: 1.1rem 3.6rem 1.1rem 1.4rem;
+	font-family: "Inter", sans-serif;
+	font-size: var(--font-size-14px);
+	color: var(--color-description);
+	background-color: var(--color-background-main);
+	border: 1px solid var(--border-color-1);
+	border-radius: var(--border-radius);
+	outline: none;
+	appearance: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+	transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .form-select:focus {
-  border-color: var(--color-icons-green-1);
-  box-shadow: 0 0 0 3px #1b746b18;
-  color: var(--color-title);
+	border-color: var(--color-icons-green-1);
+	box-shadow: 0 0 0 3px #1b746b18;
+	color: var(--color-title);
 }
 
 .form-select option {
-  color: var(--color-title);
+	color: var(--color-title);
 }
 
 /* ─── Checkbox ─── */
 
 .checkbox {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  cursor: pointer;
-  user-select: none;
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+	cursor: pointer;
+	user-select: none;
 }
 
 .checkbox input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 1.8rem;
-  height: 1.8rem;
-  min-width: 1.8rem;
-  border: 1.5px solid var(--border-color-1);
-  border-radius: 0.4rem;
-  background-color: var(--color-background-white);
-  cursor: pointer;
-  margin-top: 0.1rem;
-  transition:
-    border-color 0.15s,
-    background-color 0.15s;
-  position: relative;
+	appearance: none;
+	-webkit-appearance: none;
+	width: 1.8rem;
+	height: 1.8rem;
+	min-width: 1.8rem;
+	border: 1.5px solid var(--border-color-1);
+	border-radius: 0.4rem;
+	background-color: var(--color-background-white);
+	cursor: pointer;
+	margin-top: 0.1rem;
+	transition: border-color 0.15s, background-color 0.15s;
+	position: relative;
 }
 
 .checkbox input[type="checkbox"]:checked {
-  background-color: var(--color-icons-green-1);
-  border-color: var(--color-icons-green-1);
+	background-color: var(--color-icons-green-1);
+	border-color: var(--color-icons-green-1);
 }
 
 .checkbox input[type="checkbox"]:checked::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%) rotate(45deg);
-  width: 0.5rem;
-  height: 0.9rem;
-  border: 2px solid #fff;
-  border-top: none;
-  border-left: none;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -60%) rotate(45deg);
+	width: 0.5rem;
+	height: 0.9rem;
+	border: 2px solid #fff;
+	border-top: none;
+	border-left: none;
 }
 
 .checkbox-label {
-  font-size: var(--font-size-14px);
-  color: var(--color-description);
-  line-height: 1.5;
+	font-size: var(--font-size-14px);
+	color: var(--color-description);
+	line-height: 1.5;
 }
 
 .checkbox-label a {
-  color: var(--color-icons-green-2);
-  font-weight: var(--font-weight-medium);
-  transition: opacity 0.15s;
+	color: var(--color-icons-green-2);
+	font-weight: var(--font-weight-medium);
+	transition: opacity 0.15s;
 }
 
 .checkbox-label a:hover {
-  opacity: 0.8;
+	opacity: 0.8;
 }
 
 /* ─── Botão principal ─── */
 
 .btn-primary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  width: 100%;
-  padding: 1.2rem 2rem;
-  background-color: var(--color-background-navbar);
-  color: #ffffff;
-  border: none;
-  border-radius: var(--border-radius-2);
-  font-family: "Inter", sans-serif;
-  font-size: var(--font-size-16px);
-  font-weight: var(--font-weight-semibold);
-  cursor: pointer;
-  transition:
-    background-color 0.15s,
-    transform 0.1s;
-  margin-top: 0.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.8rem;
+	width: 100%;
+	padding: 1.2rem 2rem;
+	background-color: var(--color-background-navbar);
+	color: #ffffff;
+	border: none;
+	border-radius: var(--border-radius-2);
+	font-family: "Inter", sans-serif;
+	font-size: var(--font-size-16px);
+	font-weight: var(--font-weight-semibold);
+	cursor: pointer;
+	transition: background-color 0.15s, transform 0.1s;
+	margin-top: 0.4rem;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-icons-green-1);
+	background-color: var(--color-icons-green-1);
 }
 
 .btn-primary:active {
-  transform: scale(0.99);
+	transform: scale(0.99);
 }
 
 .btn-primary svg {
-  width: 2rem;
-  height: 2rem;
-  stroke: #ffffff;
+	width: 2rem;
+	height: 2rem;
+	stroke: #ffffff;
 }
 
 /* ─── Rodapé do card ─── */
 
 .cadastro-footer {
-  text-align: center;
-  font-size: var(--font-size-14px);
-  color: var(--color-description);
+	text-align: center;
+	font-size: var(--font-size-14px);
+	color: var(--color-description);
 }
 
 .cadastro-footer a {
-  color: var(--color-icons-green-2);
-  font-weight: var(--font-weight-semibold);
-  transition: opacity 0.15s;
+	color: var(--color-icons-green-2);
+	font-weight: var(--font-weight-semibold);
+	transition: opacity 0.15s;
 }
 
 .cadastro-footer a:hover {
-  opacity: 0.8;
+	opacity: 0.8;
 }
