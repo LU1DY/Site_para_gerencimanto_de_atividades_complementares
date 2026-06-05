@@ -1,0 +1,498 @@
+@import url(../config/global-config.css);
+
+/* Layout Principal*/
+
+.container-main-dashboard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  background-color: var(--color-background-main);
+}
+
+.display-none {
+  display: none !important;
+}
+
+.header-dashboard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;
+}
+
+.header-dashboard h2 {
+  font-size: var(--font-size-24px);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-title);
+  letter-spacing: -0.8px;
+  margin-bottom: 0.8rem;
+}
+
+.header-dashboard p {
+  font-size: var(--font-size-16px);
+  color: var(--color-description);
+}
+
+/* ─── Navegação dashboard (Visão geral e meus eventos) ─── */
+
+.nav-dashboard ul {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+  width: fit-content;
+  padding: 0.4rem;
+  border: 1px solid var(--border-color-1);
+  border-radius: var(--border-radius);
+  background-color: var(--details-2);
+}
+
+.nav-dashboard li {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+}
+
+.nav-dashboard li a {
+  font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-description);
+}
+
+.active {
+  background-color: var(--color-background-white);
+}
+
+.active a {
+  color: var(--color-title) !important;
+}
+
+/* Visão Geral*/
+
+.container-visao-geral {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+}
+
+.list-cards-dashboard {
+  display: flex;
+  align-items: center;
+  column-gap: 2.4rem;
+  width: 100%;
+  height: 24.5rem;
+}
+
+.grid-cards-dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 100%);
+  gap: 1.6rem;
+  max-width: 38.7rem;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  gap: 1.6rem;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: var(--color-background-white);
+  border: 1px solid var(--border-color-1);
+  border-radius: var(--border-radius-2);
+  box-shadow: 0 0px 4px var(--color-box-shadow);
+}
+
+.graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 38rem;
+}
+
+.border-graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 16rem;
+  height: 16rem;
+  border: 14px solid var(--color-icons-gray);
+  border-radius: 50%;
+}
+
+.border-graph .card-hours {
+  font-size: var(--font-size-30px);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-title);
+}
+
+.border-graph .card-title {
+  font-size: var(--font-size-12px);
+  color: var(--color-description);
+}
+
+.graph p {
+  display: flex;
+  align-items: center;
+  column-gap: 0.6rem;
+  margin-top: 1rem;
+  font-size: var(--font-size-14px);
+  color: var(--color-description);
+}
+
+.graph p span {
+  display: flex;
+  align-items: center;
+}
+
+.graph p span svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: var(--color-description);
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-description .card-hours {
+  font-size: var(--font-size-24px);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-title);
+}
+
+.card-description .card-title {
+  font-size: var(--font-size-14px);
+  color: var(--color-description);
+}
+
+.icon-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.icon-card svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.horas-validadas {
+  background-color: var(--color-background-icons-green-4);
+  svg {
+    stroke: var(--color-icons-green-2);
+  }
+}
+
+.horas-restantes {
+  background-color: var(--color-icons-gray);
+  svg {
+    stroke: var(--color-description);
+  }
+}
+
+.certificados-enviados {
+  background-color: var(--color-background-icons-green-2);
+  svg {
+    stroke: var(--color-icons-green-1);
+  }
+}
+
+.horas-pendentes {
+  background-color: var(--color-icons-orange-1);
+  svg {
+    stroke: var(--color-icons-orange-2);
+  }
+}
+
+/* Seção de Informações (eventos futuros e informações de certificados) */
+
+.info-dashboard {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 2.4rem;
+  width: 100%;
+}
+
+.card-dashboard {
+  width: 100%;
+  padding: 2.4rem;
+  background-color: var(--color-background-white);
+  border: 1px solid var(--border-color-1);
+  border-radius: var(--border-radius-2);
+}
+
+.header-info-dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.header-info-dashboard h2 {
+  font-size: var(--font-size-18px);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-title);
+}
+
+.header-info-dashboard a {
+  font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-icons-green-2);
+}
+
+.list-dashboard-eventos,
+.list-certificados {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+}
+
+.list-dashboard-eventos li,
+.list-certificados li {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+  padding: 1.4rem;
+  border: 1px solid var(--border-color-1);
+  border-radius: var(--border-radius-2);
+  box-shadow: 0 0px 4px var(--color-box-shadow);
+}
+
+.list-dashboard-eventos li .card-icon,
+.list-certificados li .card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--border-radius);
+}
+
+.list-dashboard-eventos li .card-icon svg,
+.list-certificados li .card-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.list-dashboard-eventos li .card-icon {
+  background-color: var(--color-background-icons-green-4);
+  svg {
+    stroke: var(--color-icons-green-2);
+  }
+}
+
+.list-certificados li:first-child .card-icon {
+  background-color: var(--color-icons-red-1);
+  svg {
+    stroke: var(--color-icons-red-2);
+  }
+}
+
+.list-certificados li:nth-child(2) .card-icon {
+  background-color: var(--color-icons-orange-1);
+  svg {
+    stroke: var(--color-icons-orange-2);
+  }
+}
+
+.list-certificados li:last-child .card-icon {
+  background-color: var(--color-background-icons-green-4);
+  svg {
+    stroke: var(--color-icons-green-2);
+  }
+}
+
+.list-dashboard-eventos li .column h3,
+.list-certificados li .column h3 {
+  font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-title);
+}
+
+.list-dashboard-eventos li .column p,
+.list-certificados li .column p {
+  font-size: var(--font-size-12px);
+  color: var(--color-description);
+}
+
+.list-dashboard-eventos li .column p strong,
+.list-certificados li .column p strong {
+  font-weight: var(--font-weight-regular);
+}
+
+/* Meus Eventos*/
+
+.header-meus-eventos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+.header-meus-eventos .titulo-bloco h2 {
+  font-size: var(--font-size-24px);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-title);
+  letter-spacing: -0.8px;
+  margin-bottom: 0.4rem;
+}
+
+.header-meus-eventos .titulo-bloco p {
+  font-size: var(--font-size-14px);
+  color: var(--color-description);
+}
+
+.header-meus-eventos a {
+  font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-icons-green-2);
+  white-space: nowrap;
+  padding-top: 0.4rem;
+}
+
+.lista-eventos-dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
+.card-evento {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 2rem;
+  background-color: var(--color-background-white);
+  border: 1px solid var(--border-color-1);
+  border-radius: var(--border-radius-2);
+  box-shadow: 0 0px 4px var(--color-box-shadow);
+}
+
+.card-evento-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.card-evento-header h3 {
+  font-size: var(--font-size-16px);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-title);
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0.4rem 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--color-background-icons-green-2);
+  font-size: var(--font-size-12px);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-icons-green-1);
+}
+
+.card-evento-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: var(--font-size-12px);
+  color: var(--color-description);
+}
+
+.meta-item svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+  stroke: var(--color-description);
+}
+
+.btn-cancelar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 1rem 1.6rem;
+  margin-top: 0.4rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color-1);
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-title);
+  transition: background-color 0.15s;
+}
+
+.btn-cancelar:hover {
+  background-color: var(--color-background-main);
+}
+
+.btn-cancelar svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  flex-shrink: 0;
+  stroke: var(--color-title);
+}
+
+.container-meus-eventos {
+  background-color: var(--color-background-white);
+  padding: 2.4rem;
+  border: 1px solid var(--border-color-1);
+  border-radius: 1.2rem;
+}
+
+.btn-explorar-eventos {
+  font-size: var(--font-size-14px);
+  padding: 1rem 1.2rem;
+  background-color: var(--color-icons-green-1);
+  border-radius: 0.8rem;
+  color: var(--color-background-white);
+  border: none;
+  margin-top: 1.6rem;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system;
+}
+
+.meus-eventos-vazio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.meus-eventos-vazio svg {
+  stroke: var(--border-color-1);
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 1.2rem;
+}
+
+.meus-eventos-vazio p {
+  font-size: var(--font-size-14px);
+  color: var(--color-description);
+}
+
+.meus-eventos-vazio button a {
+  font-weight: var(--font-weight-medium);
+}
