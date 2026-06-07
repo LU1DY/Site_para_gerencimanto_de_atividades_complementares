@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Codigo from "../components/Codigo";
+import Codigo from "../components/codigo";
 import Camera from "../components/Camera";
 
 function Comprovacao() {
@@ -42,12 +42,12 @@ function Comprovacao() {
 
       <nav className="nav-abas">
         <ul>
-          <li>
+          <li className={currentAba === "camera" && "active"}>
             <a
               href=""
               onClick={(e) => {
                 e.preventDefault();
-                setCurrentAba("codigo");
+                setCurrentAba("camera");
               }}
             >
               <svg
@@ -66,12 +66,12 @@ function Comprovacao() {
               QR Code
             </a>
           </li>
-          <li className="active">
+          <li className={currentAba === "codigo" && "active"}>
             <a
               href=" "
               onClick={(e) => {
                 e.preventDefault();
-                setCurrentAba("camera");
+                setCurrentAba("codigo");
               }}
             >
               <svg
@@ -95,8 +95,8 @@ function Comprovacao() {
         </ul>
       </nav>
 
-      {currentAba === "codigo" && <Codigo />}
-      {currentAba == "camera" && <Camera />}
+      {currentAba === "camera" && <Codigo />}
+      {currentAba == "codigo" && <Camera />}
     </section>
   );
 }

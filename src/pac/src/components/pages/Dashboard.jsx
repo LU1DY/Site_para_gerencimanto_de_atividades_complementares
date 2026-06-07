@@ -3,7 +3,7 @@ import Visaogeral from "../components/Visaogeral";
 import Certificadoseventos from "../components/Certificadoseventos";
 
 function Dashboard() {
-  const [currentAba, setCurrentAba] = useState("certificados-eventos");
+  const [currentAba, setCurrentAba] = useState("visao-geral");
   return (
     <div className="container-main-dashboard">
       <header className="header-dashboard">
@@ -15,7 +15,7 @@ function Dashboard() {
         </div>
         <nav className="nav-dashboard">
           <ul>
-            <li className="active">
+            <li className={currentAba === "visao-geral" && "active"}>
               <a
                 href=""
                 onClick={(e) => {
@@ -26,7 +26,7 @@ function Dashboard() {
                 Visão Geral
               </a>
             </li>
-            <li>
+            <li className={currentAba === "certificados-eventos" && "active"}>
               <a
                 href=""
                 onClick={(e) => {

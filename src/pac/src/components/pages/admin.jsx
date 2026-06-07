@@ -4,7 +4,7 @@ import Validar from "../components/Validar";
 import Gerenciar from "../components/Gerenciar";
 
 function Admin() {
-  const [currentAba, setCurrentAba] = useState("gerenciar");
+  const [currentAba, setCurrentAba] = useState("validar");
   return (
     <div className="page-admin">
       <header className="admin-header">
@@ -94,7 +94,10 @@ function Admin() {
 
       <nav className="nav-abas">
         <ul>
-          <li data-tab="validar">
+          <li
+            data-tab="validar"
+            className={currentAba === "validar" && "active-section"}
+          >
             <a
               href=""
               onClick={(e) => {
@@ -105,7 +108,10 @@ function Admin() {
               Validar Certificados
             </a>
           </li>
-          <li data-tab="gerenciar" className="active-section">
+          <li
+            data-tab="gerenciar"
+            className={currentAba === "gerenciar" && "active-section"}
+          >
             <a
               href=""
               onClick={(e) => {
@@ -116,7 +122,10 @@ function Admin() {
               Gerenciar Eventos
             </a>
           </li>
-          <li data-tab="emitir">
+          <li
+            data-tab="emitir"
+            className={currentAba === "emitir" && "active-section"}
+          >
             <a
               href=""
               onClick={(e) => {

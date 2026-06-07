@@ -1,6 +1,6 @@
 import React from "react";
 
-function Sidebar({ setCurrentPage }) {
+function Sidebar({ setCurrentPage, currentPage }) {
   return (
     <header id="sidebar">
       <nav>
@@ -37,6 +37,8 @@ function Sidebar({ setCurrentPage }) {
           <li>
             <a
               href="/comprovacao"
+              className={currentPage === "comprovacao" && "selected"}
+
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("comprovacao");
@@ -73,7 +75,7 @@ function Sidebar({ setCurrentPage }) {
           <li>
             <a
               href="/dashboard"
-              className="selected"
+              className={currentPage === "dashboard" && "selected"}
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("dashboard");
@@ -102,6 +104,8 @@ function Sidebar({ setCurrentPage }) {
           <li>
             <a
               href="/eventos"
+              className={currentPage === "eventos" && "selected"}
+
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("eventos");
@@ -130,6 +134,8 @@ function Sidebar({ setCurrentPage }) {
           <li>
             <a
               href="/atividades"
+              className={currentPage === "atividades" && "selected"}
+
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("atividades");
@@ -156,6 +162,8 @@ function Sidebar({ setCurrentPage }) {
           <li>
             <a
               href="/certificados"
+              className={currentPage === "certificados" && "selected"}
+
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("certificados");
@@ -183,6 +191,8 @@ function Sidebar({ setCurrentPage }) {
           <li>
             <a
               href="/notificacoes"
+              className={currentPage === "notificacoes" && "selected"}
+
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("notificacoes");
@@ -209,6 +219,8 @@ function Sidebar({ setCurrentPage }) {
           <li>
             <a
               href="/admin"
+              className={currentPage === "admin" && "selected"}
+
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("admin");

@@ -13,10 +13,10 @@ import Notificacoes from "./components/pages/notificacoes";
 import React from "react";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("dashboard");
+  const [currentPage, setCurrentPage] = useState("comprovacao");
   return (
     <div className="container-main">
-      <Sidebar setCurrentPage={setCurrentPage} />
+      <Sidebar setCurrentPage={setCurrentPage} currentPage={currentPage} />
       <div className="container">
         <Navbar />
         <div id="main">
