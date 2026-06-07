@@ -125,12 +125,16 @@
 }
 
 .tab-panel {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 1.6rem;
 }
-.tab-panel.active-section {
-  display: flex !important;
+
+.tab-panel .row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -0.8rem;
+  justify-content: space-between;
 }
 
 .secao-header {
@@ -661,6 +665,10 @@
   height: 1.6rem;
   stroke: var(--color-description);
   pointer-events: none;
+}
+
+.upload-area input {
+  display: none;
 }
 
 .busca-participante input {

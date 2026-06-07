@@ -1,7 +1,6 @@
 @import url(../config/global-config.css);
 
 .page-comprovacao {
-	padding: var(--padding-main-content);
 	display: flex;
 	flex-direction: column;
 	gap: 2.4rem;

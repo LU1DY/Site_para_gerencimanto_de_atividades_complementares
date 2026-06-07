@@ -1,8 +1,10 @@
-<link rel="stylesheet" href="/src/css/pages/cadastro.css" />
-<body>
-  <section class="container-cadastro">
-    <header class="cadastro-header">
-      <div class="cadastro-header-icon">
+import React from 'react'
+
+function Cadastro() {
+  return (
+   <section className="container-cadastro">
+    <header className="cadastro-header">
+      <div className="cadastro-header-icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -17,23 +19,23 @@
           <line x1="22" x2="16" y1="11" y2="11" />
         </svg>
       </div>
-      <div class="column">
+      <div className="column">
         <h1>Criar Conta</h1>
         <p>Cadastre-se para acessar a plataforma</p>
       </div>
     </header>
 
-    <div class="cadastro-card">
-      <div class="cadastro-card-header">
+    <div className="cadastro-card">
+      <div className="cadastro-card-header">
         <h2>Criar conta</h2>
         <p>Cadastre-se para registrar suas horas complementares.</p>
       </div>
 
-      <form class="cadastro-form">
-        <div class="form-group">
-          <label class="form-label" for="nome">Nome completo</label>
-          <div class="input">
-            <span class="input-icon">
+      <form className="cadastro-form">
+        <div className="form-group">
+          <label className="form-label" htmlFor="nome">Nome completo</label>
+          <div className="input">
+            <span className="input-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -44,14 +46,14 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-user h-4 w-4 text-muted-foreground"
+                className="lucide lucide-user h-4 w-4 text-muted-foreground"
               >
                 <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
               </svg>
             </span>
             <input
-              class="form-input"
+              className="form-input"
               type="text"
               id="nome"
               name="nome"
@@ -61,11 +63,11 @@
           </div>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="matricula">Matrícula</label>
-            <div class="input">
-              <span class="input-icon">
+        <div className="form-row">
+          <div className="form-group">
+            <label className="form-label" htmlFor="matricula">Matrícula</label>
+            <div className="input">
+              <span className="input-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -76,7 +78,7 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-id-card absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
+                  className="lucide lucide-id-card absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
                 >
                   <path d="M16 10h2"></path>
                   <path d="M16 14h2"></path>
@@ -86,7 +88,7 @@
                 </svg>
               </span>
               <input
-                class="form-input"
+                className="form-input"
                 type="text"
                 id="matricula"
                 name="matricula"
@@ -98,10 +100,10 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-label" for="curso">Curso</label>
-            <div class="select">
-              <select class="form-select" id="curso" name="curso">
+          <div className="form-group">
+            <label className="form-label" htmlFor="curso">Curso</label>
+            <div className="select">
+              <select className="form-select" id="curso" name="curso">
                 <option value="" disabled selected>Selecione</option>
                 <option value="cc">Ciência da Computação</option>
                 <option value="si">Sistemas de Informação</option>
@@ -109,7 +111,7 @@
                 <option value="ads">Análise e Desenvolvimento</option>
               </select>
               <svg
-                class="select-arrow"
+                className="select-arrow"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -123,10 +125,10 @@
           </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="email">E-mail institucional</label>
-          <div class="input">
-            <span class="input-icon">
+        <div className="form-group">
+          <label className="form-label" htmlFor="email">E-mail institucional</label>
+          <div className="input">
+            <span className="input-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -137,14 +139,14 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-mail h-4 w-4 text-muted-foreground"
+                className="lucide lucide-mail h-4 w-4 text-muted-foreground"
               >
                 <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
             </span>
             <input
-              class="form-input"
+              className="form-input"
               type="email"
               id="email"
               name="email"
@@ -154,10 +156,10 @@
           </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="senha">Senha</label>
-          <div class="input">
-            <span class="input-icon">
+        <div className="form-group">
+          <label className="form-label" htmlFor="senha">Senha</label>
+          <div className="input">
+            <span className="input-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -168,20 +170,20 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-lock absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
+                className="lucide lucide-lock absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
               >
                 <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
               </svg>
               <button
-                class="input-action"
+                className="input-action"
                 type="button"
                 id="toggle-senha"
                 aria-label="Mostrar senha"
               >
                 <svg
                   id="open-eye"
-                  class=""
+                  className=""
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
@@ -193,7 +195,7 @@
                   <circle cx="12" cy="12" r="3" />
                 </svg>
                 <svg
-                  class="display-none"
+                  className="display-none"
                   id="eye-close"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -204,7 +206,7 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-eye-off h-4 w-4"
+                  className="lucide lucide-eye-off h-4 w-4"
                 >
                   <path
                     d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"
@@ -218,7 +220,7 @@
               </button>
             </span>
             <input
-              class="form-input"
+              className="form-input"
               type="password"
               id="senha"
               name="senha"
@@ -228,16 +230,16 @@
           </div>
         </div>
 
-        <label class="checkbox">
+        <label className="checkbox">
           <input type="checkbox" id="termos" name="termos" />
-          <span class="checkbox-label">
+          <span className="checkbox-label">
             Concordo com os
             <a href="">Termos de Uso</a> e a
             <a href="">Política de Privacidade</a>.
           </span>
         </label>
 
-        <button class="btn-primary" type="submit">
+        <button className="btn-primary" type="submit">
           Criar conta
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +251,7 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-arrow-right h-4 w-4 transition-transform group-hover:translate-x-0.5"
+            className="lucide lucide-arrow-right h-4 w-4 transition-transform group-hover:translate-x-0.5"
           >
             <path d="M5 12h14"></path>
             <path d="m12 5 7 7-7 7"></path>
@@ -257,10 +259,13 @@
         </button>
       </form>
 
-      <p class="cadastro-footer">
+      <p className="cadastro-footer">
         Já possui uma conta?
         <a href="../pages/login.html">Entrar</a>
       </p>
     </div>
   </section>
-</body>
+  )
+}
+
+export default Cadastro
