@@ -1,0 +1,240 @@
+@import url(../config/global-config.css);
+
+.modal {
+  background-color: var(--color-background-white);
+  border: 1px solid var(--border-color-1);
+  border-radius: 1.2rem;
+  width: 100%;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 2.4rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.modal-header-text h2 {
+  font-size: var(--font-size-18px);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-title);
+  margin-bottom: 0.4rem;
+}
+
+.modal-header-text p {
+  font-size: var(--font-size-14px);
+  color: var(--color-description);
+}
+
+.btn-fechar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn-fechar:hover {
+  background-color: var(--details-2);
+}
+
+.btn-fechar svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke: var(--color-description);
+}
+
+.evento-card {
+  background-color: var(--color-icons-gray-2);
+  border: 1px solid var(--border-color-1);
+  border-radius: 1rem;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.evento-nome {
+  font-size: var(--font-size-16px);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-title);
+  margin-bottom: 0.4rem;
+}
+
+.evento-meta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.evento-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--font-size-14px);
+  color: var(--color-description);
+}
+
+.evento-meta-item svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: var(--color-description);
+  flex-shrink: 0;
+}
+
+.evento-descricao {
+  font-size: var(--font-size-14px);
+  color: var(--color-description);
+  line-height: 1.5;
+  margin-top: 0.8rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+.stat-card {
+  background-color: var(--color-background-white);
+  border: 1px solid var(--border-color-1);
+  border-radius: 1.2rem;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.stat-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--font-size-12px);
+  color: var(--color-description);
+}
+
+.stat-label svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: var(--color-description);
+}
+
+.stat-valor {
+  font-size: var(--font-size-24px);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-title);
+  line-height: 1;
+}
+
+.ocupacao-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.ocupacao-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ocupacao-label {
+  font-size: var(--font-size-12px);
+  color: var(--color-description);
+}
+
+.ocupacao-valor {
+  font-size: var(--font-size-12px);
+  color: var(--color-description);
+}
+
+.progress-fill {
+  width: 33%;
+}
+
+.progress-track {
+  width: 100%;
+  height: 0.8rem;
+  background-color: var(--details-2);
+  border-radius: 10rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10rem;
+  background-color: var(--color-background-navbar);
+  transition: width 0.4s ease;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.btn-fechar-footer {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color-1);
+  border-radius: 1rem;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-title);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn-fechar-footer:hover {
+  background-color: var(--color-background-main);
+}
+
+.btn-editar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-icons-green-1);
+  border: none;
+  border-radius: 1rem;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-14px);
+  font-weight: var(--font-weight-semibold);
+  color: #ffffff;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    transform 0.1s;
+}
+
+.btn-editar-modal svg {
+  stroke: var(--color-description);
+}
+
+.btn-editar:hover {
+  background-color: var(--color-background-navbar);
+}
+.btn-editar:active {
+  transform: scale(0.98);
+}
+
+.btn-editar svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: #ffffff;
+}

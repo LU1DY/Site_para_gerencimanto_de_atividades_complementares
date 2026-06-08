@@ -1,0 +1,213 @@
+@import url(../config/global-config.css);
+
+/* ============================================================
+   BODY
+   ============================================================ */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+
+.modal-certificado {
+  width: 100%;
+  max-width: 54rem;
+  background-color: var(--color-background-main);
+  border-radius: var(--border-radius);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-bottom: 1px solid var(--color-box-shadow);
+  box-shadow: 0px 0px 6px 1px var(--color-box-shadow);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* ── Cabeçalho ── */
+
+  .modal-header-certificados {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+
+      h2 {
+        font-size: var(--font-size-18px);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-title);
+      }
+
+      p {
+        font-size: var(--font-size-14px);
+        color: var(--color-description);
+        line-height: 1.5;
+        letter-spacing: -0.1px;
+      }
+    }
+
+    .close-modal {
+      border: none;
+      background-color: transparent;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      svg {
+        stroke: var(--color-description);
+      }
+    }
+  }
+
+  /* ── Formulário ── */
+
+  .form-certificado {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      position: relative;
+
+      label {
+        font-size: var(--font-size-14px);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-title);
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--color-box-shadow);
+        border-radius: var(--border-radius);
+        padding: 1.2rem 1.6rem;
+        font-size: var(--font-size-14px);
+        color: var(--color-description);
+        outline: none;
+        transition: 0.2s;
+        background-color: transparent;
+
+        &::placeholder {
+          color: var(--color-description);
+        }
+
+        &:focus {
+          border-color: #63aace4d;
+          box-shadow: 0 0 0 0.3rem #63aace4d;
+        }
+      }
+
+      textarea {
+        font-family: "Inter", system-ui;
+        font-size: var(--font-size-14px);
+        min-height: 12rem;
+        resize: none;
+      }
+
+      .contador {
+        font-size: 1.2rem;
+        text-align: end;
+        color: var(--color-description);
+      }
+
+      /* — Upload — */
+
+      .upload-area {
+        border: 2px dashed var(--border-color-1);
+        border-radius: var(--border-radius);
+        min-height: 13rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        cursor: pointer;
+        transition: 0.2s;
+        background: var(--background-color-1);
+
+        &:hover {
+          border-color: var(--color-icons-green-1);
+          background: var(--color-background-icons-green-2);
+        }
+
+        .upload-icon {
+          width: max-content;
+          height: max-content;
+
+          svg {
+            width: 4rem;
+            height: 3rem;
+            stroke: var(--color-background-navbar);
+          }
+        }
+
+        strong {
+          font-size: var(--font-size-14px);
+          font-weight: var(--font-weight-medium);
+          color: var(--color-title);
+        }
+
+        span {
+          font-size: var(--font-size-12px);
+          color: var(--color-description);
+          font-weight: var(--font-weight-regular);
+        }
+      }
+    }
+  }
+
+  /* ── Ações ── */
+
+  .modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+
+    .btn-cancelar-certificados,
+    .btn-enviar-certificados {
+      height: 4.2rem;
+      padding: 0 1.6rem;
+      border-radius: var(--border-radius);
+      font-size: var(--font-size-14px);
+      font-weight: var(--font-weight-semibold);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-cancelar-certificados {
+      border: 1px solid var(--border-color-1);
+      color: var(--color-title);
+      background-color: transparent;
+
+      &:hover {
+        background: var(--color-teal-200);
+      }
+    }
+
+    .btn-enviar-certificados {
+      border: none;
+      background: var(--color-background-navbar);
+      color: var(--color-background-white);
+
+      &:hover {
+        background: var(--color-icons-green-1);
+      }
+    }
+  }
+}

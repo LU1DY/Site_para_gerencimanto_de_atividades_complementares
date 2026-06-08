@@ -1,0 +1,53 @@
+@import url(../config/global-config.css);
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.container-main {
+  width: 100%;
+}
+
+.container-main .container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 26rem;
+  height: 100vh;
+  justify-content: baseline;
+  background-color: var(--color-background-main);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  padding: 3.2rem;
+}
+
+#main-content {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-link-sidebar);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--details);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-description);
+}

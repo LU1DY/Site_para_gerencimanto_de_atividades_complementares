@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="../src/css/components/navbar.css" />
     <link rel="stylesheet" href="../src/css/components/sidebar.css" />
     <link rel="stylesheet" href="../src/css/pages/container-main.css" />
-    <link rel="stylesheet" href="../src/css/pages/dashboard.css" />
-    <link rel="stylesheet" href="../src/css/pages/atividades.css" />
-    <link rel="stylesheet" href="../src/css/pages/eventos.css" />
     <link rel="stylesheet" href="../src/css/pages/admin.css" />
+    <link rel="stylesheet" href="../src/css/pages/atividades.css" />
+    <link rel="stylesheet" href="../src/css/pages/cadastro.css" />
+    <link rel="stylesheet" href="../src/css/pages/certificado.css" />
+    <link rel="stylesheet" href="../src/css/pages/comprovacao.css" />
+    <link rel="stylesheet" href="../src/css/pages/dashboard.css" />
+    <link rel="stylesheet" href="../src/css/pages/eventos.css" />
+    <link rel="stylesheet" href="../src/css/pages/login.css" />
+    <link rel="stylesheet" href="../src/css/pages/notificações.css" />
   </head>
   <body>
     <main>
@@ -46,8 +51,8 @@
             </div>
           </div>
           <ul>
-            <li class="selected-li">
-              <a href="" class="selected"
+            <li>
+              <a href="/src/html/pages/dashboard.html" class="selected"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -69,7 +74,7 @@
               >
             </li>
             <li>
-              <a href=""
+              <a href="/src/html/pages/eventos.html"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -91,7 +96,7 @@
               >
             </li>
             <li>
-              <a href=""
+              <a href="/src/html/pages/atividades.html"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -113,7 +118,7 @@
               >
             </li>
             <li>
-              <a href=""
+              <a href="/src/html/pages/certificados.html"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -134,7 +139,7 @@
               >
             </li>
             <li>
-              <a href=""
+              <a href="/src/html/pages/notificacoes.html"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -154,7 +159,7 @@
               >
             </li>
             <li>
-              <a href=""
+              <a href="/src/html/pages/admin.html"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -211,7 +216,34 @@
             </div>
           </nav>
         </header>
+        <section id="main"></section>
       </div>
     </main>
+    <script>
+      const conteutoMain = document.getElementById("main");
+      const links = document.querySelectorAll("#sidebar nav ul li a");
+
+      async function loadHTMLPage(url) {
+        const reposta = await fetch(url);
+        const html = await reposta.text();
+
+        conteutoMain.innerHTML = html;
+      }
+
+      links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          loadHTMLPage(link.getAttribute("href"));
+
+          links.forEach((l) => {
+            l.classList.remove("selected");
+            link.classList.add("selected");
+          });
+        });
+      });
+
+      loadHTMLPage("/src/html/pages/dashboard.html");
+    </script>
+    scr
   </body>
 </html>

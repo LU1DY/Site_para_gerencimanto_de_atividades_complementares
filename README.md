@@ -111,12 +111,6 @@ A proposta do sistema é oferecer um ambiente digital que centralize todas essas
 **Pablo Silva**
 📚 Análise e Desenvolvimento de Sistemas
 
-**Gabriel Kobayashi**
-📚 Análise e Desenvolvimento de Sistemas
-
-**Carlos Daniel**
-📚 Análise e Desenvolvimento de Sistemas
-
 
 ---
 
