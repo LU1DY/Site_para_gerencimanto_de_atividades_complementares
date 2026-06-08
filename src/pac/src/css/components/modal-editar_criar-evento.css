@@ -9,6 +9,10 @@
   max-width: 55rem;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal-header {
@@ -102,7 +106,9 @@
   border: 1px solid var(--border-color-1);
   border-radius: 0.8rem;
   outline: none;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
 }
 
 .form-input,
@@ -227,7 +233,9 @@
   font-weight: var(--font-weight-semibold);
   color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.15s, transform 0.1s;
+  transition:
+    background-color 0.15s,
+    transform 0.1s;
 }
 
 .btn-salvar:hover {

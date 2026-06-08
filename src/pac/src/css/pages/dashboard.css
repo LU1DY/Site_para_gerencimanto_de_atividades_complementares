@@ -84,7 +84,7 @@
   display: grid;
   grid-template-columns: repeat(2, 100%);
   gap: 1.6rem;
-  max-width: 38.7rem;
+  max-width: 39.3rem;
   width: 100%;
   height: 100%;
 }

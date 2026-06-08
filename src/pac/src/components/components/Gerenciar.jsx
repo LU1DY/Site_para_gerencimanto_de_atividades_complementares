@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import Modalexcluir from "./Modalexcluir";
+import ModalAnaliseEvento from "./ModalAnaliseEvento";
+import ModalEditarEvento from "./ModalEditarEvento";
+import ModalCriarEvento from "./ModalCriarEvento";
 
 function Gerenciar() {
+  const [modalExcluirEvento, setModalExcluirEvento] = useState(false);
+  const [modalAnalisarEvento, setModalAnalisarEvento] = useState(false);
+  const [modalEditarEvento, setModalEditarEvento] = useState(false);
+  const [modalCriarEvento, setModalCriarEvento] = useState(false);
+
   return (
     <div className="tab-panel" id="painel-gerenciar">
       <div className="row">
         <div className="secao-header">
           <h2>Eventos Cadastrados</h2>
         </div>
-        <button className="btn-novo-evento" type="button">
+        <button
+          className="btn-novo-evento"
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            setModalCriarEvento(true);
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -45,7 +61,14 @@ function Gerenciar() {
           </div>
           <div className="evento-acoes">
             <span className="badge-status badge-aberto">Aberto</span>
-            <button className="btn-analisar" type="button">
+            <button
+              className="btn-analisar"
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                setModalAnalisarEvento(true);
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -66,9 +89,13 @@ function Gerenciar() {
               Analisar
             </button>
             <button
-              className="btn-icone btn-editar"
+              className="btn-icone btn-editar-modal"
               type="button"
               aria-label="Editar"
+              onClick={(e) => {
+                e.preventDefault();
+                setModalEditarEvento(true);
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,6 +114,10 @@ function Gerenciar() {
               </svg>
             </button>
             <button
+              onClick={(e) => {
+                e.preventDefault();
+                setModalExcluirEvento(true);
+              }}
               className="btn-icone btn-excluir"
               type="button"
               aria-label="Excluir"
@@ -112,7 +143,7 @@ function Gerenciar() {
             </button>
           </div>
         </li>
-        <li className="evento-row">
+        {/* <li className="evento-row">
           <div className="evento-icone">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -176,6 +207,10 @@ function Gerenciar() {
               </svg>
             </button>
             <button
+              onClick={(e) => {
+                e.preventDefault();
+                setModalExcluirEvento(true);
+              }}
               className="btn-icone btn-excluir"
               type="button"
               aria-label="Excluir"
@@ -380,8 +415,18 @@ function Gerenciar() {
               </svg>
             </button>
           </div>
-        </li>
+        </li> */}
       </ul>
+      {modalExcluirEvento && <Modalexcluir />}
+      {modalAnalisarEvento && (
+        <ModalAnaliseEvento setModalAnalisarEvento={setModalAnalisarEvento} />
+      )}
+      {modalEditarEvento && (
+        <ModalEditarEvento setModalEditarEvento={setModalEditarEvento} />
+      )}
+      {modalCriarEvento && (
+        <ModalCriarEvento setModalCriarEvento={setModalCriarEvento} />
+      )}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Visaogeral() {
+function Visaogeral({ setCurrentPage }) {
   return (
     <section className="container-visao-geral">
       <ul className="list-cards-dashboard">
@@ -141,7 +141,15 @@ function Visaogeral() {
         <section className="card-dashboard">
           <header className="header-info-dashboard">
             <h2>Próximos Eventos</h2>
-            <a href="">Ver Todos</a>
+            <a
+              href=""
+              onClick={(e) => {
+                e.preventDefault();
+                setCurrentPage("eventos");
+              }}
+            >
+              Ver Todos
+            </a>
           </header>
           <ul className="list-dashboard-eventos">
             <li>
@@ -252,7 +260,15 @@ function Visaogeral() {
         <section className="card-dashboard">
           <header className="header-info-dashboard">
             <h2>Certificados Recentes</h2>
-            <a href="">Ver Todos</a>
+            <a
+              href=""
+              onClick={(e) => {
+                e.preventDefault();
+                setCurrentPage("certificados");
+              }}
+            >
+              Ver Todos
+            </a>
           </header>
 
           <ul className="list-certificados">

@@ -10,6 +10,11 @@ import "../src/css/pages/comprovacao.css";
 import "../src/css/pages/eventos.css";
 import "../src/css/pages/login.css";
 import "../src/css/pages/notificacoes.css";
+import "../src/css/components/modal-excluir.css";
+import "../src/css/components/modal-analise.css";
+import "../src/css/components/modal-analise-evento.css";
+import "../src/css/components/modal-editar_criar-evento.css";
+import "../src/css/components/modal-upload-certificados.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

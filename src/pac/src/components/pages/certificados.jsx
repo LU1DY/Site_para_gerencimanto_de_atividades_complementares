@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import ModalUploadCertificados from "../components/ModalUploadCertificados";
 
-function Certificados() {
+function Certificados({ setCurrentPage }) {
+  const [modalUploadCertificados, setModalUploadCertificados] = useState(false);
   return (
     <section className="container-certificados">
       <header className="header-certificados">
@@ -8,7 +10,12 @@ function Certificados() {
           <h2>Certificados</h2>
           <p>Confira todos os certificados válidos</p>
         </div>
-        <button>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setModalUploadCertificados(true);
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -51,6 +58,9 @@ function Certificados() {
           <span>Aprovado</span>
         </li>
       </ul>
+      {modalUploadCertificados && (
+        <ModalUploadCertificados setModalUploadCertificados={setModalUploadCertificados} />
+      )}
     </section>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Camera() {
+function Camera({ setMensagemConfirmacao }) {
   return (
     <div className="card-comprovacao">
       <div className="card-comprovacao-header">
@@ -18,7 +18,14 @@ function Camera() {
           placeholder="Ex: EVT-2026-001"
         />
       </div>
-      <button className="btn-confirmar" type="button">
+      <button
+        className="btn-confirmar"
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          setMensagemConfirmacao(true);
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

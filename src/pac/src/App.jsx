@@ -21,14 +21,18 @@ function App() {
         <Navbar />
         <div id="main">
           {currentPage === "comprovacao" && <Comprovacao />}
-          {currentPage === "dashboard" && <Dashboard />}
+          {currentPage === "dashboard" && (
+            <Dashboard setCurrentPage={setCurrentPage} />
+          )}
           {currentPage === "eventos" && <Eventos />}
           {currentPage === "atividades" && <Atividades />}
-          {currentPage === "certificados" && <Certificados />}
+          {currentPage === "certificados" && <Certificados setCurrentPage={setCurrentPage}/>}
           {currentPage === "notificacoes" && <Notificacoes />}
           {currentPage === "admin" && <Admin />}
-          {currentPage === "cadastro" && <Cadastro />}
-          {currentPage === "login" && <Login />}
+          {currentPage === "cadastro" && (
+            <Cadastro setCurrentPage={setCurrentPage} />
+          )}
+          {currentPage === "login" && <Login setCurrentPage={setCurrentPage} />}
         </div>
       </div>
     </div>

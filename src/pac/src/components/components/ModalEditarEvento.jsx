@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modal – Editar Evento</title>
-    <link
-      rel="stylesheet"
-      href="../css/components/modal-editar_criar-evento.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="modal">
-      <header class="modal-header">
+import React from "react";
+
+function ModalEditarEvento({ setModalEditarEvento }) {
+  return (
+    <div className="modal">
+      <header className="modal-header">
         <div>
           <h2>Editar Evento</h2>
           <p>Atualize as informações do evento.</p>
         </div>
-        <button class="btn-fechar" type="button" aria-label="Fechar">
+        <button className="btn-fechar" type="button" aria-label="Fechar">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -34,26 +22,37 @@
         </button>
       </header>
 
-      <div class="modal-body">
-        <div class="form-group">
-          <label class="form-label" for="titulo">Título do evento</label>
+      <div className="modal-body">
+        <div className="form-group">
+          <label className="form-label" for="titulo">
+            Título do evento
+          </label>
           <input
-            class="form-input"
+            className="form-input"
             type="text"
             id="titulo"
             value="Seminário de Inteligência Artificial"
           />
         </div>
 
-        <div class="form-row form-row-2">
-          <div class="form-group">
-            <label class="form-label" for="tipo">Tipo</label>
-            <input class="form-input" type="text" id="tipo" value="Seminário" />
+        <div className="form-row form-row-2">
+          <div className="form-group">
+            <label className="form-label" for="tipo">
+              Tipo
+            </label>
+            <input
+              className="form-input"
+              type="text"
+              id="tipo"
+              value="Seminário"
+            />
           </div>
-          <div class="form-group">
-            <label class="form-label" for="situacao">Situação</label>
-            <div class="select-wrapper">
-              <select class="form-select" id="situacao">
+          <div className="form-group">
+            <label className="form-label" for="situacao">
+              Situação
+            </label>
+            <div className="select-wrapper">
+              <select className="form-select" id="situacao">
                 <option selected>Aberto</option>
                 <option>Encerrado</option>
                 <option>Cancelado</option>
@@ -72,17 +71,19 @@
           </div>
         </div>
 
-        <div class="form-row form-row-3">
-          <div class="form-group">
-            <label class="form-label" for="data">Data</label>
-            <div class="input-wrapper">
+        <div className="form-row form-row-3">
+          <div className="form-group">
+            <label className="form-label" for="data">
+              Data
+            </label>
+            <div className="input-wrapper">
               <input
-                class="form-input"
+                className="form-input"
                 type="text"
                 id="data"
                 value="10/04/2026"
               />
-              <span class="input-icon-right">
+              <span className="input-icon-right">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -97,20 +98,24 @@
               </span>
             </div>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="carga">Carga (h)</label>
+          <div className="form-group">
+            <label className="form-label" for="carga">
+              Carga (h)
+            </label>
             <input
-              class="form-input"
+              className="form-input"
               type="number"
               id="carga"
               value="4"
               min="1"
             />
           </div>
-          <div class="form-group">
-            <label class="form-label" for="modalidade">Modalidade</label>
-            <div class="select-wrapper">
-              <select class="form-select" id="modalidade">
+          <div className="form-group">
+            <label className="form-label" for="modalidade">
+              Modalidade
+            </label>
+            <div className="select-wrapper">
+              <select className="form-select" id="modalidade">
                 <option selected>Presencial</option>
                 <option>Online</option>
                 <option>Híbrido</option>
@@ -129,30 +134,45 @@
           </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="local">Local</label>
+        <div className="form-group">
+          <label className="form-label" for="local">
+            Local
+          </label>
           <input
-            class="form-input"
+            className="form-input"
             type="text"
             id="local"
             value="Auditório Central"
           />
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="descricao">Descrição</label>
-          <div class="textarea-wrapper">
-            <textarea class="form-textarea" id="descricao" maxlength="500">
-Palestra sobre os avanços recentes em IA generativa.</textarea
-            >
-            <span class="textarea-contador" id="contador">52/500</span>
+        <div className="form-group">
+          <label className="form-label" for="descricao">
+            Descrição
+          </label>
+          <div className="textarea-wrapper">
+            <textarea className="form-textarea" id="descricao" maxlength="500">
+              Palestra sobre os avanços recentes em IA generativa.
+            </textarea>
+            <span className="textarea-contador" id="contador">
+              52/500
+            </span>
           </div>
         </div>
       </div>
 
-      <footer class="modal-footer">
-        <button class="btn-fechar-footer" type="button">Fechar</button>
-        <button class="btn-salvar" type="button">
+      <footer className="modal-footer">
+        <button
+          className="btn-fechar-footer"
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            setModalEditarEvento(false);
+          }}
+        >
+          Fechar
+        </button>
+        <button className="btn-salvar" type="button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -167,5 +187,7 @@ Palestra sobre os avanços recentes em IA generativa.</textarea
         </button>
       </footer>
     </div>
-  </body>
-</html>
+  );
+}
+
+export default ModalEditarEvento;

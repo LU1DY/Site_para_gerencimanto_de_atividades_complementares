@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import Modalexcluir from "./Modalexcluir";
+import ModalAnaliseCertificado from "./ModalAnaliseCertificado";
 
 function Validar() {
+  const [modalExcluir, setModalExcluir] = useState(false);
+  const [modalAnalisarCertificado, setModalAnalisarCertificado] =
+    useState(false);
   return (
     <div className="tab-panel" id="painel-validar">
       <div className="secao-header">
@@ -33,7 +38,14 @@ function Validar() {
           </div>
           <div className="cert-acoes">
             <span className="badge-status badge-pendente">Pendente</span>
-            <button className="btn-validar" type="button">
+            <button
+              className="btn-validar"
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                setModalAnalisarCertificado(true);
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -51,6 +63,10 @@ function Validar() {
               className="btn-icone btn-excluir"
               type="button"
               aria-label="Excluir"
+              onClick={(e) => {
+                e.preventDefault();
+                setModalExcluir(true);
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +89,7 @@ function Validar() {
             </button>
           </div>
         </li>
-        <li className="cert-row">
+        {/* <li className="cert-row">
           <div className="cert-icon cert-icon-aprovado">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -228,8 +244,14 @@ function Validar() {
               </svg>
             </button>
           </div>
-        </li>
+        </li> */}
       </ul>
+      {modalExcluir && <Modalexcluir setModalExcluir={setModalExcluir} />}
+      {modalAnalisarCertificado && (
+        <ModalAnaliseCertificado
+          setModalAnalisarCertificado={setModalAnalisarCertificado}
+        />
+      )}
     </div>
   );
 }

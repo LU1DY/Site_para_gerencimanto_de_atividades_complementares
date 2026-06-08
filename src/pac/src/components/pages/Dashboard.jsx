@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Visaogeral from "../components/Visaogeral";
 import Certificadoseventos from "../components/Certificadoseventos";
 
-function Dashboard() {
+function Dashboard({ setCurrentPage }) {
   const [currentAba, setCurrentAba] = useState("visao-geral");
   return (
     <div className="container-main-dashboard">
@@ -41,8 +41,12 @@ function Dashboard() {
         </nav>
       </header>
 
-      {currentAba === "visao-geral" && <Visaogeral />}
-      {currentAba === "certificados-eventos" && <Certificadoseventos />}
+      {currentAba === "visao-geral" && (
+        <Visaogeral setCurrentPage={setCurrentPage} />
+      )}
+      {currentAba === "certificados-eventos" && (
+        <Certificadoseventos setCurrentPage={setCurrentPage} />
+      )}
     </div>
   );
 }

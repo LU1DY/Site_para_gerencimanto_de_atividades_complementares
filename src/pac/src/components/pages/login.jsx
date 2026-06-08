@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import OlhoAberto from "../components/OlhoAberto";
+import OlhoFechado from "../components/OlhoFechado";
 
-function Login() {
+function Login({ setCurrentPage }) {
+  const [mostrarSenha, setMostrarSenha] = useState(false);
   return (
     <section className="container-login">
       <header className="login-header">
@@ -57,7 +60,7 @@ function Login() {
                 </svg>
               </span>
               <input
-                className="form-input"
+                className="form-input-login"
                 type="text"
                 id="matricula"
                 name="matricula"
@@ -103,8 +106,8 @@ function Login() {
                 </svg>
               </span>
               <input
-                className="form-input"
-                type="password"
+                className="form-input-login"
+                type={mostrarSenha ? "text" : "password"}
                 id="senha"
                 name="senha"
                 placeholder="Sua senha"
@@ -116,38 +119,11 @@ function Login() {
                 id="toggle-senha"
                 aria-label="Mostrar senha"
               >
-                <svg
-                  id="open-eye"
-                  className=""
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-                  <circle cx="12" cy="12" r="3" />
-                </svg>
-                <svg
-                  className="display-none"
-                  id="eye-close"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  className="lucide lucide-eye-off h-4 w-4"
-                >
-                  <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path>
-                  <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path>
-                  <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path>
-                  <path d="m2 2 20 20"></path>
-                </svg>
+                {mostrarSenha ? (
+                  <OlhoAberto setMostrarSenha={setMostrarSenha} />
+                ) : (
+                  <OlhoFechado setMostrarSenha={setMostrarSenha} />
+                )}
               </button>
             </div>
           </div>
@@ -178,8 +154,16 @@ function Login() {
         </form>
 
         <p className="login-footer">
-          Ainda não tem conta?
-          <a href="../pages/cadastro.html">Criar conta</a>
+          Ainda não tem conta? 
+          <a
+            href="../pages/cadastro.html"
+            onClick={(e) => {
+              e.preventDefault();
+              setCurrentPage("cadastro");
+            }}
+          >
+           Criar conta
+          </a>
         </p>
       </div>
     </section>

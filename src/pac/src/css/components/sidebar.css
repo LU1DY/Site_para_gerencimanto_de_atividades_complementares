@@ -17,7 +17,6 @@
 .selected {
   color: var(--color-background-white) !important;
   background-color: var(--color-green-details);
-  border-radius: var(--border-radius);
 }
 
 #sidebar .header-logo {
@@ -91,6 +90,11 @@
   color: var(--color-link-sidebar);
   font-weight: var(--font-weight-medium);
   padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+}
+
+#sidebar nav ul li a:hover {
+  background-color: var(--color-icons-green-6);
 }
 
 #sidebar nav ul li a svg {
@@ -105,6 +109,12 @@
   font-size: var(--font-size-14px);
   color: var(--color-link-sidebar);
   font-weight: var(--font-weight-light);
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+}
+
+#sidebar nav .logout a:hover {
+  background-color: var(--color-icons-green-6);
 }
 
 #sidebar nav .logout a svg {

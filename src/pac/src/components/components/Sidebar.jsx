@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import Modallogout from "./Modallogout";
 
 function Sidebar({ setCurrentPage, currentPage }) {
+  const [modal, setModal] = useState(false);
   return (
     <header id="sidebar">
       <nav>
@@ -38,7 +40,6 @@ function Sidebar({ setCurrentPage, currentPage }) {
             <a
               href="/comprovacao"
               className={currentPage === "comprovacao" && "selected"}
-
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("comprovacao");
@@ -105,7 +106,6 @@ function Sidebar({ setCurrentPage, currentPage }) {
             <a
               href="/eventos"
               className={currentPage === "eventos" && "selected"}
-
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("eventos");
@@ -135,7 +135,6 @@ function Sidebar({ setCurrentPage, currentPage }) {
             <a
               href="/atividades"
               className={currentPage === "atividades" && "selected"}
-
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("atividades");
@@ -163,7 +162,6 @@ function Sidebar({ setCurrentPage, currentPage }) {
             <a
               href="/certificados"
               className={currentPage === "certificados" && "selected"}
-
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("certificados");
@@ -192,7 +190,6 @@ function Sidebar({ setCurrentPage, currentPage }) {
             <a
               href="/notificacoes"
               className={currentPage === "notificacoes" && "selected"}
-
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("notificacoes");
@@ -220,7 +217,6 @@ function Sidebar({ setCurrentPage, currentPage }) {
             <a
               href="/admin"
               className={currentPage === "admin" && "selected"}
-
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage("admin");
@@ -244,9 +240,72 @@ function Sidebar({ setCurrentPage, currentPage }) {
               Admin
             </a>
           </li>
+          <li>
+            <a
+              href="/login"
+              className={currentPage === "login" && "selected"}
+              onClick={(e) => {
+                e.preventDefault();
+                setCurrentPage("login");
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-log-in h-4 w-4"
+              >
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                <polyline points="10 17 15 12 10 7"></polyline>
+                <line x1="15" x2="3" y1="12" y2="12"></line>
+              </svg>
+              Entrar
+            </a>
+          </li>
+          <li>
+            <a
+              href="/cadastro"
+              className={currentPage === "cadastro" && "selected"}
+              onClick={(e) => {
+                e.preventDefault();
+                setCurrentPage("cadastro");
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-user-plus h-4 w-4"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <line x1="19" x2="19" y1="8" y2="14"></line>
+                <line x1="22" x2="16" y1="11" y2="11"></line>
+              </svg>
+              Cadastrar
+            </a>
+          </li>
         </ul>
         <div className="logout">
-          <a href="">
+          <a
+            href=""
+            onClick={(e) => {
+              e.preventDefault();
+              setModal(true);
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -266,6 +325,7 @@ function Sidebar({ setCurrentPage, currentPage }) {
             Sair
           </a>
         </div>
+        {modal && <Modallogout setModal={setModal} />}
       </nav>
     </header>
   );
